@@ -1,0 +1,22 @@
+styling :
+
+global styling
+
+    importing a css file from a node module is permitted any where between the application 
+    for global style sheet , we can import inside pages/_app.js
+    on conclusion 
+        if we want a style sheet to apear on every page of the application we should global style
+        but if we want to use on only a particular page we can save file with .module.css ext 
+            and then import on that page 
+
+styled jsx
+
+    it is css in js library that allows you to write encapsulated and scoped css to style compoments 
+    the styles you introduce for one compoment won't affect other compoments
+    so we can write css inside any compoment like this 
+        <style jsx>
+        {`
+            .class{
+                background-color:red;
+            }
+        `}
