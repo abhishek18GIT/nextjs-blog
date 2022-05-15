@@ -20,3 +20,9 @@ styled jsx
                 background-color:red;
             }
         `}
+
+_app.js 
+    
+    it is the file which is present on every page 
+    therefore the things which we want to be present on every page should put inside it 
+    like navbar , header etc
