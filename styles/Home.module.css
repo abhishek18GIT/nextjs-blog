@@ -5,7 +5,7 @@
 .main {
   min-height: 100vh;
   justify-content: flex-start;
-  padding-top:3rem;
+  padding-top:4rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -121,23 +121,26 @@
   font-weight: bold;
 }
 
-.home_img{
-  border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%;
-}
+
+
 .imgwrap{
   width: 50%;
   float: left;
 }
+
 .home_main_div{
   padding-top:6%;
   display: flex;
   align-items: center;
   width: 1000px;
 }
+
 .home_main_par{
   width: 50%;
   float: right;
+  padding-top: 6%;
 }
+
 .home_main_para_innner{
   padding-left:8%;
   font-size: 17px;
@@ -148,6 +151,30 @@
   border-radius:25%;
 }
 
+.signature{
+  opacity: 50%;
+}
+
+.quotes_heading{
+  font-size: 35px;
+  padding-top: 8%;
+}
+
+.footer_div{
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  justify-content: space-around;
+}
+
+.footer_div_1{
+  display: flex;
+  align-items: center;
+}
+
+.navli{
+  cursor: pointer;
+}
 
 
 
