@@ -1,7 +1,7 @@
 import React, { useEffect , useState} from 'react'
 import Link from 'next/link'
-import styles from '../styles/Blog.module.css'
-
+import styles2 from '../styles/Blog.module.css'
+import styles from '../styles/Sample.module.css'
 const blog = (props) => {
   const [blogs, setBlogs] = useState(props.allBlogs);
   // useEffect(()=>{
@@ -11,20 +11,49 @@ const blog = (props) => {
   //     setBlogs(parsed)
   //   })
   // },[])
+  var count = 0;
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-      <h2>Blogs Posts</h2>
+    <div className={styles2.container}>
+      <main className={styles2.main}>
+      <h2>The Man in the Machine</h2>
+      <div className={styles.timeline_section}>
         {blogs.map((blogitem) => {
+          count=count+1;
           return  <div key={blogitem.slug}>
-            <Link  href={`blogpost/${blogitem.slug}`}>
-              <h3 className={styles.blogitemh3}>{blogitem.title}</h3>
-            </Link>
-            <p>{blogitem.content.substr(0,400)}</p>
-          </div>
+            
+            <div className={styles.timeline_items}>
+                <div className={`${(count%2) == 0 ?"even":"odd"}timeline_item`}>
+                    <div className={styles.timeline_dot}></div>
+                    <div className={styles.timeline_date}>{blogitem.date}</div>
+                    <div className={styles.timeline_content}>
+                    <Link  href={`blogpost/${blogitem.slug}`}>
+                      <h3 className={styles.blogitemh3}>{blogitem.title}</h3>
+                    </Link>
+                        <p>{blogitem.content.substr(0,300)}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
         })}
-        
+        </div>
       </main>
+      <style jsx>{`
+          .eventimeline_item{
+            margin-bottom: 40px;
+            width: 100%;
+            position: relative;
+              padding-left: calc(50% + 30px);
+          }
+          .oddtimeline_item{
+            margin-bottom: 40px;
+            width: 100%;
+            position: relative;
+              padding-right: calc(50% + 30px);
+            text-align: right;
+          }
+        }
+      `}</style>
     </div>
   )
 }
