@@ -11,10 +11,10 @@ export default function Home() {
       <Head>
       </Head>
       <main className={styles.main}>
-        <Image className={styles.signature} src="/signature.png" height={160} width={570} />
+        <img className={styles.signature} src="/signature.png" height={160} width={570} />
         <div className={styles.home_main_div}>
           <div className={styles.imgwrap}>
-            <Image className={styles.home_img} src="/steve_jobs01.jpg" height={450} width={400} />
+            <img className={styles.home_img} src="/steve_jobs01.jpg" height={450} width={400} />
           </div>
           <div className={styles.home_main_par}>
             <div className={styles.home_main_para_innner}>

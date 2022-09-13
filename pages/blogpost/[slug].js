@@ -28,7 +28,8 @@ const slug = (props) => {
 
 export async function getServerSideProps(context) {
     const {slug} = context.query
-    let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+    // console.log(context.req.headers.host);
+    let data = await fetch(`http://${context.req.headers.host}/api/getblog?slug=${slug}`)
     let setBlog = await data.json()
   return {
     props: {setBlog}, // will be passed to the page component as props
