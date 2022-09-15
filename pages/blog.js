@@ -52,6 +52,9 @@ const blog = (props) => {
               padding-right: calc(50% + 30px);
             text-align: right;
           }
+          h2{
+              font-size: 60px;
+          }
         }
       `}</style>
     </div>

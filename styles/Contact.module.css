@@ -40,7 +40,7 @@
     /* radial-gradient(
       circle at 0% 0%, lightgrey 0 40%, transparent 40.2%
     ),  */
-    grey;
+    #1e1e23;
   border-radius: 10px 0 0 10px;
 }
 
@@ -105,7 +105,7 @@
 
 .h2 {
   font-family: 'Arimo', sans-serif;
-  color: #fff;
+  color: lightgray;
   font-size: clamp(30px, 6vw, 60px);
   letter-spacing: 2px;
   text-align: center;
