@@ -2,10 +2,10 @@ import React, { useEffect , useState} from 'react'
 import Link from 'next/link'
 import styles2 from '../styles/Blog.module.css'
 import styles from '../styles/Sample.module.css'
-const blog = (props) => {
+const blog = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(()=>{
-    fetch('http://localhost:3000/api/blogs').then((a) => {
+    fetch('https://nextjs-stevejobs-karlexvoid.vercel.app/api/blogs').then((a) => {
       return a.json()
     }).then((parsed) => {
       setBlogs(parsed)
