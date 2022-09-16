@@ -2,7 +2,7 @@
 import * as fs from 'fs';
 // http://localhost:3000/api/getblog?slug=blog1
 export default function handler(req, res) {
-  fs.readFile(`public/blogdata/${req.query.slug}.json`,'utf-8',(err,data)=>{
+  fs.readFile(`blogdata/${req.query.slug}.json`,'utf-8',(err,data)=>{
     if(err){
         res.status(500).json({error: "No such blog found"})
     }
