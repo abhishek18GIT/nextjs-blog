@@ -19,10 +19,10 @@ const Footer = () => {
 
           <div className={styles.links}>
                   <div className={styles.link}>
-                    <a><img className={styles.img}src="/linkedin-logo.png" alt="linkedin" /></a>
+                    <a href='https://www.linkedin.com/in/abhishek-sharma-07481520a/' target='__blank'><img className={styles.img}src="/linkedin-logo.png" alt="linkedin" /></a>
                   </div>
                   <div className={styles.link}>
-                    <a><img className={styles.img}src="/github-logo.png" alt="github" /></a>
+                    <a href='https://github.com/karlexvoid' target='__blank'><img className={styles.img}src="/github-logo.png" alt="github" /></a>
                   </div>
                 </div>
         </div>
