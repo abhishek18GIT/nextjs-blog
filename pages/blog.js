@@ -3,14 +3,14 @@ import Link from 'next/link'
 import styles2 from '../styles/Blog.module.css'
 import styles from '../styles/Sample.module.css'
 const blog = (props) => {
-  const [blogs, setBlogs] = useState(props.allBlogs);
-  // useEffect(()=>{
-  //   fetch('http://localhost:3000/api/blogs').then((a) => {
-  //     return a.json()
-  //   }).then((parsed) => {
-  //     setBlogs(parsed)
-  //   })
-  // },[])
+  const [blogs, setBlogs] = useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:3000/api/blogs').then((a) => {
+      return a.json()
+    }).then((parsed) => {
+      setBlogs(parsed)
+    })
+  },[])
   var count = 0;
   return (
     <div className={styles2.container}>
@@ -61,13 +61,13 @@ const blog = (props) => {
   )
 }
 
-export async function getServerSideProps(context) {
-  // console.log(context.req.headers.host)
-  let data = await  fetch(`http://${context.req.headers.host}/api/blogs`)
-  let allBlogs = await data.json()
-  return {
-    props: {allBlogs}, // will be passed to the page component as props
-  }
-}
+// export async function getServerSideProps(context) {
+//   // console.log(context.req.headers.host)
+//   let data = await  fetch(`http://${context.req.headers.host}/api/blogs`)
+//   let allBlogs = await data.json()
+//   return {
+//     props: {allBlogs}, // will be passed to the page component as props
+//   }
+// }
 
 export default blog

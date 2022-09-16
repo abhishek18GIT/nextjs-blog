@@ -11,4 +11,11 @@ module.exports = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  experimental: { 
+    nftTracing: true 
+  }
 }
+experimental: { 
+  nftTracing: true 
+}
+
